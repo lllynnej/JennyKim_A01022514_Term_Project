@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- AOS CSS (Animate On Scroll) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+        <nav class="mobile-links">
+            <a href="#menu">MENU</a>
+            <a href="#reserve">RESERVE</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#order">ORDER</a>
+        </nav>
+        <nav class="links">
+            <a href="#menu">MENU</a>
+            <a href="#reserve">RESERVE</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#order">ORDER</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Slider Section -->
+        <section class="slider-container">
+            <div class="slider">
+                <img src="images/slide1.png" alt="Slide 1">
+                <img src="images/slide2.png" alt="Slide 2">
+                <img src="images/slide3.png" alt="Slide 3">
+            </div>
+        </section>
+
+        <!-- Paragraph Under Slider -->
+        <section class="slider-description">
+            <p>There's No Place Like Homer</p>
+        </section>
+
+        <!-- Image Grid Section -->
+        <section class="image-grid">
+            <div class="grid-item" data-aos="fade-up">
+                <a href="images/1.png" data-lightbox="gallery">
+                    <img src="images/1.png" alt="Image 1">
+                </a>
+            </div>
+            <div class="grid-item" data-aos="fade-up">
+                <a href="images/2.png" data-lightbox="gallery">
+                    <img src="images/2.png" alt="Image 2">
+                </a>
+            </div>
+            <div class="grid-item" data-aos="fade-up">
+                <a href="images/3.png" data-lightbox="gallery">
+                    <img src="images/3.png" alt="Image 3">
+                </a>
+            </div>
+            <div class="grid-item" data-aos="fade-up">
+                <a href="images/4.png" data-lightbox="gallery">
+                    <img src="images/4.png" alt="Image 4">
+                </a>
+            </div>
+            <div class="grid-item" data-aos="fade-up">
+                <a href="images/5.png" data-lightbox="gallery">
+                    <img src="images/5.png" alt="Image 5">
+                </a>
+            </div>
+            <div class="grid-item" data-aos="fade-up">
+                <a href="images/6.png" data-lightbox="gallery">
+                    <img src="images/6.png" alt="Image 6">
+                </a>
+            </div>
+            <div class="grid-item" data-aos="fade-up">
+                <a href="images/7.png" data-lightbox="gallery">
+                    <img src="images/7.png" alt="Image 7">
+                </a>
+            </div>
+            <div class="grid-item" data-aos="fade-up">
+                <a href="images/8.png" data-lightbox="gallery">
+                    <img src="images/8.png" alt="Image 8">
+                </a>
+            </div>
+        </section>
+
+        <!-- Large Image Section -->
+        <section class="large-image-container">
+            <img src="images/Newsletter.png" alt="Large Image" class="large-image">
+        </section>
+
+        <!-- Form Section (For jQuery Validation) -->
+        <section class="form-section">
+            <form id="contact-form" action="" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer Content -->
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Homer St. Cafe And Bar</strong></p>
+                <p>898 Homer Street Vancouver, BC</p>
+                <p>TEL. 604 428 4299</p>
+            </div>
+            <div class="footer-map">
+                <img src="images/map.png" alt="Location Map" class="map-image">
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-sns">
+            <img src="images/Facebook.png" alt="Facebook" class="sns-icon">
+            <img src="images/instagram.png" alt="Instagram" class="sns-icon">
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <p>&copy; 2023 Homer Street Cafe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+    <script>
+        // Initialize Slick Carousel
+        $(document).ready(function(){
+            $('.slider').slick({
+                autoplay: true,
+                dots: true
+            });
+
+            // Initialize AOS (Animate On Scroll)
+            AOS.init();
+
+            // jQuery Validation for form
+            $("#contact-form").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 3
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    message: {
+                        required: true,
+                        minlength: 10
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "Please enter your name",
+                        minlength: "Name should be at least 3 characters"
+                    },
+                    email: {
+                        required: "Please enter your email",
+                        email: "Please enter a valid email address"
+                    },
+                    message: {
+                        required: "Please enter a message",
+                        minlength: "Message should be at least 10 characters"
+                    }
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
